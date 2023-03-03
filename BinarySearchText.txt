@@ -1,0 +1,2 @@
+Reding list of words from this file then storing it in an array than sorting it
+then using binary search alorithm to find if the word exists in the array or not which also means that word exist in this file
