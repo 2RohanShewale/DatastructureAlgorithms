@@ -13,7 +13,7 @@ namespace Algorithms
         {
             while (true)
             {
-                Console.Write("\n1.Permutation\n2.Binary Search\n3.Insertion Sort\n4.Bubble Sort\nEnter your choice:");
+                Console.Write("\n1.Permutation\n2.Binary Search\n3.Insertion Sort\n4.Bubble Sort\n5.Anagram Detections\nEnter your choice:");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -55,6 +55,14 @@ namespace Algorithms
                             unsorted[i] = s;
                         }
                         bubble.Sort(unsorted);
+                        break;
+                    case 5:
+                        AnagramDetection anagram = new AnagramDetection();
+                        Console.WriteLine("Enter first strings:");
+                        string s1 = Console.ReadLine();
+                        Console.WriteLine("Enter first strings:");
+                        string s2 = Console.ReadLine();
+                        anagram.Detection(s1, s2);
                         break;
                     default:
                         Console.WriteLine("Invalid choice.");
