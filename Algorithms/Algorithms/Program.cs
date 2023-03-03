@@ -13,7 +13,7 @@ namespace Algorithms
         {
             while (true)
             {
-                Console.Write("\n1.Permutation\n2.Binary Search\n3.Insertion Sort\nEnter your choice:");
+                Console.Write("\n1.Permutation\n2.Binary Search\n3.Insertion Sort\n4.Bubble Sort\nEnter your choice:");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -42,6 +42,19 @@ namespace Algorithms
                             array[i] = s;
                         }
                         insertion.Sorting(array);
+                        break;
+                    case 4:
+                        BubbleSorting bubble = new BubbleSorting();
+                        Console.WriteLine("\nHow many strings you want to add:");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        string[] unsorted = new string[n];
+                        for (int i = 0; i < n; i++)
+                        {
+                            Console.WriteLine("Enter string:");
+                            string s = Console.ReadLine();
+                            unsorted[i] = s;
+                        }
+                        bubble.Sort(unsorted);
                         break;
                     default:
                         Console.WriteLine("Invalid choice.");
